@@ -1,0 +1,210 @@
+/** Yet Another Status Bar - styles.scss **/
+
+/** Catppuccin Theme **/
+$cat-rosewater: #f5e0dc;
+$cat-flamingo: #f2cdcd;
+$cat-pink: #f5c2e7;
+$cat-mauve: #cba6f7;
+$cat-red: #f38ba8;
+$cat-maroon: #eba0ac;
+$cat-peach: #fab387;
+$cat-yellow: #f9e2af;
+$cat-green: #a6e3a1;
+$cat-teal: #94e2d5;
+$cat-sky: #89dceb;
+$cat-sapphire: #74c7ec;
+$cat-blue: #89b4fa;
+$cat-lavender: #b4befe;
+$cat-text: #cdd6f4;
+$cat-subtext1: #bac2de;
+$cat-subtext0: #a6adc8;
+$cat-overlay2: #9399b2;
+$cat-overlay1: #7f849c;
+$cat-overlay0: #6c7086;
+$cat-surface2: #585b70;
+$cat-surface1: #45475a;
+$cat-surface0: #313244;
+$cat-base: #1e1e2e;
+$cat-mantle: #181825;
+$cat-crust: #11111b;
+
+:root {
+  // https://github.com/hivivo/ngx-json-viewer#theming
+  --ngx-json-key: $cat-blue;
+  --ngx-json-string: $cat-green;
+  --ngx-json-number: $cat-peach;
+  --ngx-json-boolean: $cat-peach;
+}
+
+// In order override default styles, you must follow the same level of specificity defined in default.scss
+// https://github.com/denBot/yasb/tree/tauri-port/src/default.scss
+body {
+  .bar {
+    // background: $cat-mantle;
+    background-color: transparent;
+    color: $cat-text;
+    font-size: 12px;
+    // border-radius: 38px;
+
+    // You can calculate inner bar widths and heights
+    // height: calc(100vh - 12px);
+    // width: calc(100vw - 12px);
+    // height: 36px;
+    // margin: 6px;
+    height: 100vh;
+    width: 100vw;
+    // border-radius: 5px;
+
+    .widgets-container {
+      .widget {
+        font-family: "JetBrainsMono Nerd Font", Courier, monospace;
+
+        &.error {
+          background: $cat-crust;
+          color: $cat-red;
+        }
+      }
+    }
+  }
+}
+
+// Styles not defined in default.scss do not need to match the same level of specificity.
+.widgets-container {
+  .bar-left {
+    margin-left: 6px;
+  }
+  .bar-right {
+    margin-right: 6px;
+  }
+}
+
+// Shared class names can also be styled  e.g. '.widget' targets all widgets:
+.widget {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 14px;
+  border-radius: 5px;
+  background-color: $cat-crust;
+  color: $cat-mauve;
+  font-weight: bold;
+
+  i {
+    // Add left/right padding to widget icons
+    padding: 0 5px;
+
+    &.matIcon {
+      font-size: 16px;
+    }
+  }
+}
+.komorebi-workspaces > div > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.workspace-btn {
+  color: $cat-mauve !important;
+  background-color: $cat-mantle !important;
+  border-radius: 2px;
+  &.active {
+    background-color: $cat-base !important;
+    color: $cat-text !important;
+  }
+  &.empty {
+    background-color: transparent !important;
+  }
+  &:hover {
+    background-color: $cat-surface2 !important;
+  }
+}
+
+// #CustomWidget {
+//   color: $cat-mauve !important;
+// }
+
+#SysInfoWidget {
+  color: $cat-mauve !important;
+}
+
+// You can style widgets based on their ID (widget type)
+#ActiveWindowWidget {
+  color: $cat-mauve !important;
+  // background-color: $bar-widget-background-color-alt;
+}
+
+// #DateTimeWidget {
+//   color: $cat-mauve !important;
+//   // background-color: transparent;
+// }
+
+// Or via a user defined class name
+.bold-right-widget {
+  background: $cat-green;
+  color: $cat-base;
+  font-weight: bold;
+}
+
+.json-viewer-popup {
+  background-color: $cat-base;
+
+  .ngx-json-viewer {
+    overflow-y: auto;
+    background-color: $cat-overlay2;
+    border: 1px solid $cat-base;
+    border-radius: 5px;
+  }
+}
+
+.calendar-popup {
+  background: $cat-base;
+  border: 1px solid #000;
+
+  * {
+    color: $cat-text;
+  }
+
+  .mat-calendar-arrow {
+    fill: $cat-text;
+  }
+
+  .mat-calendar-body-selected {
+    color: $cat-flamingo;
+  }
+
+  .mat-calendar-table-header th {
+    font-weight: normal;
+  }
+
+  .mat-calendar-body-selected {
+    background-color: $cat-mantle;
+  }
+
+  .mat-calendar-body-today {
+    background-color: $cat-mauve;
+    color: $cat-base;
+  }
+
+  .mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover
+    > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(
+      .mat-calendar-body-comparison-identical
+    ) {
+    background-color: $cat-mauve;
+    color: $cat-base;
+    opacity: 0.75;
+  }
+
+  .cdk-program-focused
+    .mat-calendar-body-active
+    > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(
+      .mat-calendar-body-comparison-identical
+    ) {
+    color: $cat-mauve;
+
+    &:hover {
+      color: $cat-base;
+    }
+  }
+}
