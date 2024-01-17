@@ -1,0 +1,125 @@
+{
+  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/master/schema.json",
+  "active_window_border": true,
+  "active_window_border_colours": {
+    "single": {
+      "r": 203,
+      "g": 166,
+      "b": 247
+    },
+    "stack": {
+      "r": 245,
+      "g": 194,
+      "b": 231
+    },
+    "monocle": {
+      "r": 243,
+      "g": 139,
+      "b": 168
+    }
+  },
+  "active_window_border_offset": -5,
+  "active_window_border_width": 8,
+  "alt_focus_hack": true,
+  "app_specific_configuration_path": "$Env:USERPROFILE/applications.yaml",
+  "cross_monitor_move_behaviour": "Insert",
+  "default_container_padding": 5,
+  "default_workspace_padding": 5,
+  "float_rules": [
+    {
+      "id": "yasb.exe",
+      "kind": "Exe"
+    }
+  ],
+  "monitors": [
+    {
+      "name": "Dell U3415W",
+      "workspaces": [
+        {
+          "layout": "BSP",
+          "name": "I"
+        },
+        {
+          "layout": "VerticalStack",
+          "name": "II"
+        },
+        {
+          "layout": "BSP",
+          "name": "III"
+        },
+        {
+          "layout": "UltrawideVerticalStack",
+          "name": "IV"
+        },
+        {
+          "layout": "Rows",
+          "name": "V"
+        }
+      ]
+    },
+    {
+      "name": "Bluecase",
+      "work_area_offset": {
+        "bottom": 36,
+        "left": 0,
+        "right": 0,
+        "top": 36
+      },
+      "workspaces": [
+        {
+          "layout": "Rows",
+          "name": "A"
+        },
+        {
+          "layout": "HorizontalStack",
+          "name": "B"
+        },
+        {
+          "layout": "Rows",
+          "name": "C"
+        },
+        {
+          "layout": "Rows",
+          "name": "D"
+        },
+        {
+          "layout": "HorizontalStack",
+          "name": "E"
+        }
+      ]
+    },
+    {
+      "name": "Samsung G7",
+      "work_area_offset": {
+        "bottom": 36,
+        "left": 0,
+        "right": 0,
+        "top": 36
+      },
+      "workspaces": [
+        {
+          "layout": "BSP",
+          "name": "1"
+        },
+        {
+          "layout": "VerticalStack",
+          "name": "2"
+        },
+        {
+          "layout": "HorizontalStack",
+          "name": "3"
+        },
+        {
+          "layout": "UltrawideVerticalStack",
+          "name": "4"
+        },
+        {
+          "layout": "Rows",
+          "name": "5"
+        }
+      ]
+    }
+  ],
+  "resize_delta": 50,
+  "window_hiding_behaviour": "Cloak"
+}
