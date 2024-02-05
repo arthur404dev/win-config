@@ -36,6 +36,48 @@
       "name": "Dell U3415W",
       "workspaces": [
         {
+          "layout": "UltrawideVerticalStack",
+          "name": "I"
+        },
+        {
+          "layout": "VerticalStack",
+          "name": "II"
+        },
+       {
+          "layout": "VerticalStack",
+          "name": "III"
+        },
+        {
+          "layout": "UltrawideVerticalStack",
+          "name": "IV"
+        },
+        {
+          "layout": "BSP",
+          "name": "V"
+        }
+      ]
+    },
+    {
+      "name": "Bluecase",
+      "workspaces": [
+        {
+          "layout": "Rows",
+          "name": "I"
+        },
+        {
+          "layout": "HorizontalStack",
+          "name": "II"
+        },
+        {
+          "layout": "Rows",
+          "name": "III"
+        }
+      ]
+    },
+    {
+      "name": "Samsung G7",
+      "workspaces": [
+        {
           "layout": "BSP",
           "name": "I"
         },
@@ -44,78 +86,8 @@
           "name": "II"
         },
         {
-          "layout": "BSP",
+          "layout": "HorizontalStack",
           "name": "III"
-        },
-        {
-          "layout": "UltrawideVerticalStack",
-          "name": "IV"
-        },
-        {
-          "layout": "Rows",
-          "name": "V"
-        }
-      ]
-    },
-    {
-      "name": "Bluecase",
-      "work_area_offset": {
-        "bottom": 36,
-        "left": 0,
-        "right": 0,
-        "top": 36
-      },
-      "workspaces": [
-        {
-          "layout": "Rows",
-          "name": "A"
-        },
-        {
-          "layout": "HorizontalStack",
-          "name": "B"
-        },
-        {
-          "layout": "Rows",
-          "name": "C"
-        },
-        {
-          "layout": "Rows",
-          "name": "D"
-        },
-        {
-          "layout": "HorizontalStack",
-          "name": "E"
-        }
-      ]
-    },
-    {
-      "name": "Samsung G7",
-      "work_area_offset": {
-        "bottom": 36,
-        "left": 0,
-        "right": 0,
-        "top": 36
-      },
-      "workspaces": [
-        {
-          "layout": "BSP",
-          "name": "1"
-        },
-        {
-          "layout": "VerticalStack",
-          "name": "2"
-        },
-        {
-          "layout": "HorizontalStack",
-          "name": "3"
-        },
-        {
-          "layout": "UltrawideVerticalStack",
-          "name": "4"
-        },
-        {
-          "layout": "Rows",
-          "name": "5"
         }
       ]
     }

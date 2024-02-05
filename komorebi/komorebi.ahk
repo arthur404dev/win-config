@@ -12,26 +12,27 @@ Start()
 CompleteConfiguration()
 
 ; Define the Leader Key
-Leader := "#"
+Leader := "!"
 
 ; Start and Stop Komorebi
-Hotkey Leader "!^s", (*) => Start()
-Hotkey Leader "!^q", (*) => Stop()
-Hotkey Leader "!^r", (*) => TogglePause()
+Hotkey Leader "#^s", (*) => Start()
+Hotkey Leader "#^q", (*) => Stop()
+Hotkey Leader "#^r", (*) => TogglePause()
 
 ; OS management
-Hotkey Leader "Esc", (*) => DllCall("PowrProf\SetSuspendState", "int", 0, "int", 1, "int", 0)
-Hotkey Leader "^!.", (*) => WinShow("ahk_class NotifyIconOverflowWindow")
-Hotkey Leader "^!/", (*) => WinHide("ahk_class NotifyIconOverflowWindow")
+Hotkey Leader "^Esc", (*) => DllCall("PowrProf\SetSuspendState", "int", 0, "int", 1, "int", 0)
+Hotkey Leader "^.", (*) => WinShow("ahk_class NotifyIconOverflowWindow")
+Hotkey Leader "^/", (*) => WinHide("ahk_class NotifyIconOverflowWindow")
 
-; Focus windows - Control Modifier
-Hotkey Leader "^h", (*) => Focus("left")
-Hotkey Leader "^j", (*) => Focus("down")
-Hotkey Leader "^k", (*) => Focus("up")
-Hotkey Leader "^l", (*) => Focus("right")
-Hotkey Leader "^[", (*) => CycleFocus("previous")
-Hotkey Leader "^]", (*) => CycleFocus("next")
-Hotkey Leader "^;", (*) => CycleMonitor("next")
+; Focus windows - No Modifier
+Hotkey Leader "h", (*) => Focus("left")
+Hotkey Leader "j", (*) => Focus("down")
+Hotkey Leader "k", (*) => Focus("up")
+Hotkey Leader "l", (*) => Focus("right")
+Hotkey Leader "[", (*) => CycleFocus("previous")
+Hotkey Leader "]", (*) => CycleFocus("next")
+Hotkey Leader ";", (*) => CycleMonitor("next")
+Hotkey Leader "q", (*) => WinClose("A")
 
 ; Move windows - Shift Modifier
 Hotkey Leader "+h", (*) => Move("left")
@@ -40,20 +41,20 @@ Hotkey Leader "+k", (*) => Move("up")
 Hotkey Leader "+l", (*) => Move("right")
 Hotkey Leader "+Enter", (*) => Promote()
 
-; Stack windows - Alt Modifier
-Hotkey Leader "!h", (*) => Stack("left")
-Hotkey Leader "!j", (*) => Stack("down")
-Hotkey Leader "!k", (*) => Stack("up")
-Hotkey Leader "!l", (*) => Stack("right")
-Hotkey Leader "!;", (*) => Unstack()
-Hotkey Leader "![", (*) => CycleStack("previous")
-Hotkey Leader "!]", (*) => CycleStack("next")
+; Stack windows - Ctrl Modifier
+Hotkey Leader "^h", (*) => Stack("left")
+Hotkey Leader "^j", (*) => Stack("down")
+Hotkey Leader "^k", (*) => Stack("up")
+Hotkey Leader "^l", (*) => Stack("right")
+Hotkey Leader "^;", (*) => Unstack()
+Hotkey Leader "^[", (*) => CycleStack("previous")
+Hotkey Leader "^]", (*) => CycleStack("next")
 
 ; Resize
-Hotkey Leader "!=", (*) => ResizeAxis("horizontal", "increase")
-Hotkey Leader "!-", (*) => ResizeAxis("horizontal", "decrease")
-Hotkey Leader "+!=", (*) => ResizeAxis("vertical", "increase")
-Hotkey Leader "+!-", (*) => ResizeAxis("vertical", "decrease")
+Hotkey Leader "=", (*) => ResizeAxis("horizontal", "increase")
+Hotkey Leader "-", (*) => ResizeAxis("horizontal", "decrease")
+Hotkey Leader "+=", (*) => ResizeAxis("vertical", "increase")
+Hotkey Leader "+-", (*) => ResizeAxis("vertical", "decrease")
 
 ; Manipulate windows
 Hotkey Leader "v", (*) => ToggleFloat()
