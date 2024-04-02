@@ -33,7 +33,7 @@
   ],
   "monitors": [
     {
-      "name": "Dell U3415W",
+      "name": "Samsung",
       "workspaces": [
         {
           "layout": "UltrawideVerticalStack",
@@ -43,7 +43,7 @@
           "layout": "VerticalStack",
           "name": "II"
         },
-       {
+        {
           "layout": "VerticalStack",
           "name": "III"
         },
@@ -61,32 +61,42 @@
       "name": "Bluecase",
       "workspaces": [
         {
-          "layout": "Rows",
-          "name": "I"
-        },
-        {
-          "layout": "HorizontalStack",
-          "name": "II"
-        },
-        {
-          "layout": "Rows",
-          "name": "III"
-        }
-      ]
-    },
-    {
-      "name": "Samsung G7",
-      "workspaces": [
-        {
           "layout": "BSP",
-          "name": "I"
+          "name": "I",
+          "initial_workspace_rules": [
+            {
+              "id": "Slack.exe",
+              "kind": "Exe"
+            },
+            {
+              "id": "Discord.exe",
+              "kind": "Exe"
+            }
+          ]
         },
         {
           "layout": "VerticalStack",
           "name": "II"
         },
         {
-          "layout": "HorizontalStack",
+          "layout": "BSP",
+          "name": "III"
+        }
+      ]
+    },
+    {
+      "name": "Dell",
+      "workspaces": [
+        {
+          "layout": "UltrawideVerticalStack",
+          "name": "I"
+        },
+        {
+          "layout": "UltrawideVerticalStack",
+          "name": "II"
+        },
+        {
+          "layout": "BSP",
           "name": "III"
         }
       ]
