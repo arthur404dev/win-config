@@ -33,6 +33,11 @@ Hotkey Leader "[", (*) => CycleFocus("previous")
 Hotkey Leader "]", (*) => CycleFocus("next")
 Hotkey Leader ";", (*) => CycleMonitor("next")
 Hotkey Leader "q", (*) => WinClose("A")
+Hotkey Leader "Enter", (*) => (
+    Run("wt.exe")
+    WinWait("ahk.exe wt.exe")
+    WinActivate("ahk.exe wt.exe")
+)
 
 ; Move windows - Shift Modifier
 Hotkey Leader "+h", (*) => Move("left")
